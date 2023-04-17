@@ -12,9 +12,6 @@ import java.util.regex.Matcher;
  * DESCRIPCION: Clase auxiliar para validar los datos que sean introducidos en
  * la aplicaci�n.
  * 
- * @version 30/01/2023
- * @author Miguel Garcia
- * 
  ******************************************************************************************/
 public class Validator {
 
