@@ -287,6 +287,15 @@ public class Validator {
 		return false;
 
 	}
+	
+	//Este metodo comprueba que la fecha sea hoy
+	public static boolean userFechaActual(LocalDate fecha) {
+		LocalDate actual = LocalDate.now();
+		if (actual.equals(fecha)) {
+			return true;
+		}
+		return false;
+	}
 
 	/**
 	 * esFechaValida Recibe una string con formato fecha dd/mm/aaaa y comprueba el

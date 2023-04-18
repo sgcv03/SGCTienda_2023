@@ -1,6 +1,5 @@
 package rf.com.tienda.dominio;
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,12 +15,11 @@ import rf.com.tienda.util.*;
 public class Categoria {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id_categoria;			//identificador categoria
+	private Integer id_categoria;			//identificador categoria
 	
-	@Column(name = "nombre", nullable = false)
+	@Column(nullable = false, columnDefinition = "VARCHAR(50)")
 	private String cat_nombre;          //nombre de la categoria
-	
-	@Column(name = "descripcion")
+	@Column(columnDefinition = "VARCHAR(200)")
 	private String cat_descripcion;		//descripcion de la categoria
 	
 	
@@ -50,7 +48,6 @@ public class Categoria {
 	public void setId_categoria(int id_categoria) {
 		if (id_categoria > 0) {
 			this.id_categoria = id_categoria;
-
 		}
 	}
 	
