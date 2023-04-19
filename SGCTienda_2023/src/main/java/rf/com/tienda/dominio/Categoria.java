@@ -17,9 +17,9 @@ public class Categoria {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id_categoria;			//identificador categoria
 	
-	@Column(nullable = false, columnDefinition = "VARCHAR(50)")
+	@Column(nullable = false)
 	private String cat_nombre;          //nombre de la categoria
-	@Column(columnDefinition = "VARCHAR(200)")
+	@Column
 	private String cat_descripcion;		//descripcion de la categoria
 	
 	
@@ -27,11 +27,6 @@ public class Categoria {
 		
 	}
 	
-	
-	public boolean isValid(){	
-		return !Validator.isVacio(cat_nombre) &&
-				id_categoria > 0;
-	}
 	
 	/**
 	 * Getter para identificador de categoria
@@ -46,9 +41,8 @@ public class Categoria {
 	 * 
 	 */
 	public void setId_categoria(int id_categoria) {
-		if (id_categoria > 0) {
-			this.id_categoria = id_categoria;
-		}
+		this.id_categoria = id_categoria;
+		
 	}
 	
 	/**

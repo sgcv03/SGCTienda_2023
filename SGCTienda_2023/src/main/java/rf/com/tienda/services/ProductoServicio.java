@@ -20,6 +20,11 @@ public class ProductoServicio implements IProducto{
 	public List<Producto> listarProductos() {
 		return repositorioProducto.findAll();
 	}
+	
+	@Override
+	public Producto buscarProducto(String id_producto) {
+		return repositorioProducto.findById(id_producto).get();
+	}
 
 	@Override
 	public Producto insertarProducto(Producto producto) {

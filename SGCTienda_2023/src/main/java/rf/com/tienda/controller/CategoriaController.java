@@ -30,6 +30,11 @@ public class CategoriaController {
 	public List<Categoria> listarCategorias() {
 		return categoriaService.listarCategorias();
 	}
+	
+	@GetMapping("/{id}")
+	public Categoria buscarCategoria(@PathVariable("id") Integer id) {
+		return categoriaService.buscarCategoria(id);
+	}
 
 	@PostMapping
 	public Categoria insertarCategoria(@RequestBody Categoria categoria) {

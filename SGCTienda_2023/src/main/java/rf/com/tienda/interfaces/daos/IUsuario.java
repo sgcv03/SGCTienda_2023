@@ -7,6 +7,7 @@ import rf.com.tienda.dominio.Usuario;
 public interface IUsuario {
 	
 	public abstract List<Usuario> listarUsuarios();
+	public abstract Usuario buscarUsuario(Integer id);
 	public abstract Usuario insertarUsuario(Usuario usuario);
 	public abstract Usuario actualizarUsuario(Usuario usuario, Integer id);
 	public abstract void eliminarUsuario(Integer id);

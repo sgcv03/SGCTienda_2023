@@ -27,6 +27,11 @@ public class UsuarioController {
 		return usuarioService.listarUsuarios();
 	}
 	
+	@GetMapping("/{id}")
+	public Usuario buscarUsuario(@PathVariable("id") Integer id) {
+		return usuarioService.buscarUsuario(id);
+	}
+	
 	@PostMapping
 	public Usuario insertarProducto(@RequestBody Usuario usuario) {
 		return usuarioService.insertarUsuario(usuario);

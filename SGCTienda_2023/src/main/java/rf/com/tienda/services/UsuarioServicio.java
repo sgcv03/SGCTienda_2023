@@ -22,6 +22,11 @@ public class UsuarioServicio implements IUsuario{
 	}
 
 	@Override
+	public Usuario buscarUsuario(Integer id) {
+		return usuarioRepositorio.findById(id).get();
+	}
+	
+	@Override
 	public Usuario insertarUsuario(Usuario usuario) {
 		return usuarioRepositorio.save(usuario);
 	}

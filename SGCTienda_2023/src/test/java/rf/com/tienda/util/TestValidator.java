@@ -18,11 +18,6 @@ public class TestValidator {
 		assertFalse(Validator.isAlfanumeric("Texto#ConCaracteres!Especiales"));
 	}
 	
-	@Test
-	public void testIsVacio() {
-		assertTrue(Validator.isVacio(""));
-		assertFalse(Validator.isVacio("Esto no esta vacio"));
-	}
 	
 	//*********************************************************
 	

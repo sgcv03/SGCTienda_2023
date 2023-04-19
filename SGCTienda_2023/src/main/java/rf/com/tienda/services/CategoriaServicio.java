@@ -21,6 +21,11 @@ public class CategoriaServicio implements ICategoria{
 	public List<Categoria> listarCategorias() {
 		return repositorioCategoria.findAll();
 	}
+	
+	@Override
+	public Categoria buscarCategoria(Integer id_categoria) {
+		return repositorioCategoria.findById(id_categoria).get();
+	}
 
 	@Override
 	public Categoria insertarCategoria(Categoria categoria) {

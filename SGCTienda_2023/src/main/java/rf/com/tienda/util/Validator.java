@@ -66,12 +66,6 @@ public class Validator {
 		return false;
 	}
 
-	public static boolean isVacio(String prueba) {
-		if (prueba.isEmpty()) {
-			return true;
-		}
-		return false;
-	}
 
 	/*
 	 * *****************************************************************************

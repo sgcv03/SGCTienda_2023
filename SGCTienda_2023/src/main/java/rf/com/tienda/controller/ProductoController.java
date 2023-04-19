@@ -27,6 +27,11 @@ public class ProductoController {
 		return productoService.listarProductos();
 	}
 	
+	@GetMapping("/{id}")
+	public Producto buscarProducto(@PathVariable("id") String id_producto) {
+		return productoService.buscarProducto(id_producto);
+	}
+	
 	@PostMapping
 	public Producto insertarProducto(@RequestBody Producto producto) {
 		return productoService.insertarProducto(producto);
